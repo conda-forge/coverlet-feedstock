@@ -1,0 +1,38 @@
+context:
+  version: 6.0.2
+
+package:
+  name: coverlet
+  version: ${{ version }}
+
+source:
+  git: https://github.com/coverlet-coverage/coverlet
+  tag: v${{ version }}
+
+build:
+  number: 0
+  noarch: generic
+
+requirements:
+  host:
+    - dotnet
+    - nuget-license
+  run:
+    - dotnet
+
+tests:
+  - script:
+      - coverlet --help
+
+about:
+  license: MIT
+  license_file:
+    - LICENSE
+    - license-files/
+  summary: Cross platform code coverage for .NET
+  homepage: https://github.com/coverlet-coverage/coverlet
+  repository: https://github.com/coverlet-coverage/coverlet
+
+extra:
+  recipe-maintainers:
+    - danielnachun
