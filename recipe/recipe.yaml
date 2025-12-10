@@ -6,20 +6,23 @@ package:
   version: ${{ version }}
 
 source:
-  git: https://github.com/coverlet-coverage/coverlet
-  tag: v${{ version }}
+  - git: https://github.com/coverlet-coverage/coverlet
+    tag: v${{ version }}
+  - url: https://github.com/coverlet-coverage/coverlet/archive/refs/tags/v${{ version }}.tar.gz
+    sha256: 4e24efa3e418dee02ae52f9eb77e99b15448d0d6c438da819a9ce5ff69f0ae2b
+    target_directory: archive
 
 build:
-  number: 0
+  number: 1
   noarch: generic
 
 requirements:
   host:
-    - dotnet
+    - dotnet =9
     - git
-    - nuget-license
+    - nuget-license <4
   run:
-    - dotnet
+    - dotnet =9
 
 tests:
   - script:
