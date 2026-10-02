@@ -1,5 +1,5 @@
 context:
-  version: 6.0.4
+  version: "10.1.0"
 
 package:
   name: coverlet
@@ -9,11 +9,11 @@ source:
   - git: https://github.com/coverlet-coverage/coverlet
     tag: v${{ version }}
   - url: https://github.com/coverlet-coverage/coverlet/archive/refs/tags/v${{ version }}.tar.gz
-    sha256: 4e24efa3e418dee02ae52f9eb77e99b15448d0d6c438da819a9ce5ff69f0ae2b
+    sha256: 16e0f8ca674211b0555f17996892fc88ea0f7d654caa70ac105c103fa2928b14
     target_directory: archive
 
 build:
-  number: 1
+  number: 0
   noarch: generic
 
 requirements:
